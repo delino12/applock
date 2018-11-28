@@ -8,7 +8,7 @@
 </p>
 
 ## Applock
-Cavilock helps developer's or software providers monitor their application status and fire a lock event when subscription elapsed
+Applock helps developer's or software providers monitor their application status and fire a lock event when subscription elapsed
 
 ### Get Started (Installation)
 ```javascript
@@ -41,4 +41,13 @@ Next is to clear compiled class, run the following command.
 Apply to middleware
 ```javascript
 return Applock::verifySoftware($request, $next);
+```
+
+### Applying middleware to routes
+Apply to middleware
+```javascript
+Route::get('/', function () {
+    return view('welcome');
+})->middleware('verify_software');
+
 ```
