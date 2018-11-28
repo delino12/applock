@@ -38,6 +38,11 @@ Next is to clear compiled class, run the following command.
 ```
 
 ### How to use (Middleware)
+Create Middleware
+```
+$ php artisan make:middleware VerifySoftware
+```
+
 Apply to middleware
 ```javascript
 return Applock::verifySoftware($request, $next);
