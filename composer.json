@@ -12,7 +12,17 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Delino\\Applock\\": "packages/delino/applock/src"
+            "Delino\\Applock\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Delino\\Applock\\ApplockServiceProvider"
+            ],
+            "aliases": {
+                "Applock": "Delino\\Applock\\Facades\\Applock"
+            }
         }
     }
 }
