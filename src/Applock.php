@@ -12,9 +12,9 @@ class Applock
     public function verifySoftware($request, $next){
     	// body
     	$software_key  = env("SOFTWARE_KEY");
-    	$software_host = env("SOFTWARE_HOST", "http://localhost:8402/api/verify/software");
+    	$software_host = env("SOFTWARE_HOST");
     	if(empty($software_key)){
-    		return view('applock::invalid');
+    		return redirect('invalid');
     	}else{
 	    	$query = array(
 	    		"software_key" => $software_key
@@ -33,9 +33,9 @@ class Applock
 		    	if($data["status"] == true){
 		    		return $next($request);
 		    	}elseif($data["status"] == false){
-		    		return redirect('/expired');
+		    		return redirect('expired');
 		    	}else{
-		    		return redirect('/invalid');
+		    		return redirect('invalid');
 		    	}
 
 		    	// close curl process 

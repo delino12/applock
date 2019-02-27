@@ -28,16 +28,18 @@
             </button>
           </div>
           <div class="modal-body text-center p-4">
-            <h1 class="lead">Your software licence has expired, contact service provider</h1>
-            <p>You are getting this popup message because your software subscription has expired please contact your services provider for more information</p>
+            <h1 class="lead">
+              Your software licence has expired, contact service provider
+            </h1>
+            <p>
+              You are getting this popup message because your software subscription
+              has expired please contact your services provider for more information
+            </p>
             <br />
             <a href="mailto:consultant@cavidel.com" class="btn btn-default">consultant@cavidel.com</a>
           </div>
           <div class="modal-footer">
-            <a href="{{ url('/') }}" class="btn btn-primary">Go back</a>
-            <button class="btn btn-success">
-              Purchase Full Licence
-            </button>
+            <a href="{{ url('/') }}" class="btn btn-primary">Close</a>
           </div>
         </div>
       </div>
